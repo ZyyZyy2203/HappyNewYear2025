@@ -1,0 +1,100 @@
+/* Nền video */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #D2691E;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+video.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(0.5); /* Làm mờ video */
+}
+
+/* Container nội dung */
+.container {
+    margin-top: 50px;
+    z-index: 1;
+    position: relative;
+}
+
+/* Tiêu đề với hình ảnh linh vật */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #FF4500;
+}
+
+h1 img {
+    width: 80px;
+    height: auto;
+    margin: 0 10px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+h1 img:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* Nội dung khác */
+p {
+    font-size: 1.2em;
+}
+
+.envelopes {
+    margin: 20px auto;
+}
+
+.envelope {
+    font-size: 2em;
+    padding: 20px;
+    background: #FF6347;
+    border: none;
+    border-radius: 10px;
+    color: #FFF;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.envelope:hover {
+    transform: scale(1.2);
+}
+
+.result {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+img {
+    max-width: 200px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    background: #32CD32;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #228B22;
+}

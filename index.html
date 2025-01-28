@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Năm Mới 2025</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Video nền -->
+    <video class="background-video" autoplay loop muted>
+        <source src="./img/background.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ video nền.
+    </video>
+
+    <!-- Nội dung -->
+    <div class="container">
+        <h1>
+            <img src="./img/linhvat1.png" alt="Linh vật 1"> 
+            Chúc Mừng Năm Mới 2025! 
+            <img src="./img/linhvat.png" alt="Linh vật 2">
+        </h1>
+        <p>Chọn một phong bao lì xì để nhận lời chúc và may mắn đầu năm!</p>
+        <div class="envelopes">
+            <button class="envelope" onclick="openLuckyMoney()">🧧</button>
+        </div>
+        <div id="result" class="result hidden">
+            <img id="image" alt="Hình lì xì">
+            <p id="message"></p>
+            <p id="amount"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
