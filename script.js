@@ -65,20 +65,18 @@ const luckyData = [
 // Hàm tạo mảng trọng số dựa trên tỷ lệ
 function createWeightedArray() {
     const weightedArray = [];
-    const totalWeight = 1e8;
 
     luckyData.forEach((item, index) => {
-        let weight = 0;
         if (["50,000 VNĐ", "100,000 VNĐ", "200,000 VNĐ", "500,000 VNĐ"].includes(item.amount)) {
-            weight = 0;
-        } else if (["10,000 VNĐ", "20,000 VNĐ"].includes(item.amount)) {
-            weight = Math.ceil(totalWeight * 0.15);
+            
+            for (let i = 0; i < 0; i++) {
+                weightedArray.push(index);
+            }
         } else {
-            weight = Math.ceil(totalWeight * 0.85 / 8);
-        }
-
-        for (let i = 0; i < weight; i++) {
-            weightedArray.push(index);
+            // Giá trị thường: 95% chia đều cho các phần tử còn lại
+            for (let i = 0; i < 12.5; i++) {
+                weightedArray.push(index);
+            }
         }
     });
 
@@ -96,13 +94,7 @@ function openLuckyMoney() {
     document.getElementById("result").classList.remove("hidden");
     document.getElementById("image").src = luckyItem.image;
     document.getElementById("message").textContent = luckyItem.message;
-    document.getElementById("amount").textContent = "Lì xì: " + luckyItem.amount;
+    document.getElementById("amount").textContent = "Mệnh giá: " + luckyItem.amount;
 
     document.querySelector(".envelopes").style.display = "none";
-}
-
-// Hàm reset
-function reset() {
-    document.getElementById("result").classList.add("hidden");
-    document.querySelector(".envelopes").style.display = "block";
 }
